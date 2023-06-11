@@ -1,0 +1,1148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#scroll_to_top {
+    position: fixed;
+    /* background-color: white; */
+    font-size: 30px;
+    bottom: 50px;
+    right: 15px;
+}
+  
+/********************************HEADER*************************************/
+
+/** Navigation **/
+
+#home {
+    background: radial-gradient(rgb(139, 195, 245), #1294b8);
+}
+
+a, h4 {
+    color: white; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.navbar > h4 {
+    font-size: 2em;
+} 
+
+.navbar > nav > ul {
+    display: flex;
+    flex-direction: row;  
+}
+
+.navbar > nav > ul > li {
+    padding: 30px 10px;
+}
+
+.navbar > .logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar > .logo > .lien-icone {
+    padding: 0 10px;
+}
+
+.navbar > .logo > .lien-icone>img {
+    width: 80%;
+}
+
+/** Presentation **/
+
+.startup_creative {
+    display: flex;
+    padding: 4% 10% 10% 10%;
+}
+
+.startup_creative > .presentation {
+    display: flex;
+    flex-direction:column;
+    flex: 2;
+    padding:5% 10% 5% 5%;
+}
+
+.startup_creative > .presentation > h1 {
+    font-size: 3em;
+    font-weight:900;
+    line-height: 1.2em;
+}
+
+.startup_creative > .presentation > .intro {
+    padding: 5% 0;
+    /* font-weight:light; */
+}
+
+/** Bouton Email **/
+
+.recup_mail {
+    border-radius: 1.1em;
+    background-color: #fff;
+    padding: 0.1em;
+    padding-left: 0.9em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email {
+    max-width: calc(100% - 96px - 1em);
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+}
+
+.subscribe {
+    border: none;
+    background-color: #1294b8;
+    color: white;
+    padding: 0.4em 0.7em;
+    border-radius: 2em;
+    font-size: 0.9em;
+}
+
+.subscribe:hover {
+    background-color: #1294b8b4;
+    cursor: pointer;
+}
+
+.image-accueil{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.dessin_ecran{
+    width: 100%;
+}
+
+/**************************************MAIN*****************************/
+
+/** Caractéristiques des produits **/
+
+.produits{
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    text-align: center;
+    padding: 5% 32% 0 32%;
+}
+
+.gris{
+    text-align: center;
+    color: rgba(128, 128, 128, 0.700);
+    padding: 1% 28%;
+}
+
+.caracteristiques{
+    display: flex;
+    justify-content: center;
+    gap: 1.5%;
+    padding: 3% 0 6% 0;
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width:300px;
+    background: radial-gradient(rgb(139, 195, 245), #1294b8);
+    padding: 5% 2%;
+    border-radius: 3%;
+    box-shadow: 0 10px 6px -6px rgba(159, 159, 159, 0.500);
+    transition: transform .3s ease-out;
+}
+
+.features:hover{
+    transform: translateY(-10px);
+}
+
+h5, .description{
+    color: white;
+    text-align: center;
+}
+
+h5{
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 6% 0 4% 0;
+}
+
+.description{
+    font-size: 0.7em;
+    font-weight: 100;
+}
+
+/** How it works **/
+
+.how_it_works {
+    background-color: rgba(211, 211, 211, 0.3);
+    padding-bottom: 20%;
+}
+
+/** Team **/
+
+.presentation_equipe {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+}
+
+.presentation_personne {
+    padding: 20px;
+}
+
+.presentation_personne > span {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: 600;  
+}
+
+.sous_titre_stat {
+    text-align: center;
+    color: rgba(128, 128, 128, 0.700);
+    font-size: 0.8em;
+    font-weight: 600;
+    padding-bottom: 15%;
+}
+
+/*------------intégration des effets sur les portraits de l'équipe--------*/
+
+.portrait_base {
+    position: relative;
+    z-index: 1;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.portrait_container {
+    overflow: hidden;
+    height: 100%;
+}
+
+.portrait {
+    transition: all 0.4s;
+    height: 220px;
+    filter: grayscale(1);
+    opacity: 1;
+}
+
+.portrait_base:hover .portrait {
+    transform: scale(1.1);
+    filter: grayscale(0);
+    transition: all 0.5s;
+}
+
+.logo_black{
+    border-radius: 50%;
+    width: 80%;
+    border: 5px solid white;
+    background-color: rgb(255, 255, 255);
+}
+
+.icon_liens_sociaux{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    top: 20%;
+    left: -15%;
+    transition: 0.5s all ease;
+    /* filter: grayscale(1); */
+    
+}
+
+.portrait_base:hover .icon_liens_sociaux {
+    transform: translate(45px,20px);
+    transition: 0.5s all ease;
+    /* filter: grayscale(0); */
+}
+
+/*--------fin d'intégration des effets sur les portraits de l'équipe-------*/
+
+figcaption {
+    text-align: center;
+    font-weight: 600;
+    padding-top: 2%;
+}
+
+.poste_personne {
+    text-align: center;
+    color: rgba(128, 128, 128, 0.700);
+    font-size: 0.8em;
+}
+
+/** Get Started **/
+
+#get-started {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 65vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-image: url(../img/parallax.png);
+    filter: grayscale(0.5);
+    filter: contrast(40%);
+    filter: brightness(0.4);
+    z-index: -1;
+}
+
+.titre_h2_blanc {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.blanc {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding: 1% 20%;
+}
+
+.buttonForm {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.button_get_started {
+    color: white;
+    background-color: transparent;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.8s ease;
+}
+
+.button_get_started:hover {
+    background-color: white;
+    color: black;
+    transform: translate(0,-5px);
+    transition: all 0.8s ease;
+    cursor: pointer;
+}
+    
+/** Clients **/
+
+#client{
+    background-color: rgba(211, 211, 211, 0.3);
+}
+
+.logo_client_container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 5% 15% 20% 15%;
+}
+
+.logo_client_container > figure {
+    width: 14%;
+}
+
+.logo_client_container > figure > a > .logo_client {
+    width: 100%;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.logo_client_container > figure > a > .logo_client:hover {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+/** Creativity **/
+
+#creativite {
+    display: flex;
+    flex-direction: row;
+    padding: 6% 10% 10% 10%;
+
+}
+
+.digital_creative {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 4% 10% 5% 5%;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+.para_gris {
+    padding: 7% 0;
+    /* text-align:justify; */
+    color: rgba(128, 128, 128, 0.700);
+}
+
+.nbr_stat {
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.stat_creativity {
+    display: flex;
+}
+
+.stat {
+    padding-right: 45px;
+}
+
+.sous_stat {
+    color: rgba(128, 128, 128, 0.700);
+    padding-bottom: 35px;
+    font-size: 1em;
+}
+
+.learn_more {
+    background-color: rgba(80, 130, 240);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* voir si effet :hover */
+}
+
+.design_creatif {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.dessin_creatif {
+    width: 100%;
+    object-fit: contain;
+}
+
+/** Our Pricing **/
+
+#our_pricing {
+    background-color: rgba(211, 211, 211, 0.3);
+}
+
+.gamme_forfait {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5% 0;
+}
+
+.carte_forfait {
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 2% 1.5%;
+    /* font-size: 0.9em; */
+    box-shadow: 5px 10px 18px rgba(159, 159, 159, 0.500);
+}
+
+h6 {
+    font-size: 1em;
+}
+
+.price_month {
+    display: flex;
+    justify-content: center;
+    height: 48px;
+    margin: 20px;
+}
+
+.symbol_devise {
+    color:  rgba(80, 130, 240);
+    font-size: 1.5em;
+    align-items:start;
+    margin-top: -2px;
+}
+
+.price {
+    display: flex;
+    color:  rgba(80, 130, 240);
+    font-size:3em;
+    align-items: center;
+}
+
+.by_month {
+    display: flex;
+    font-size: 0.6em;
+    align-items:end;
+    padding-bottom: 4px;
+}
+
+.option {
+    height: 40px;
+}
+
+.fa-circle-xmark {
+    float: left;
+    color: red;
+    /* font-size: 90%; */
+}
+
+.fa-circle-check {
+    float: left;
+    color: green;
+}
+
+.designation {
+    float: left;
+    line-height: 16px;
+}
+
+.float-right {
+    float: right;
+    line-height: 16px;
+}
+
+.join_now {
+    background-color: white;
+    color:  rgba(80, 130, 240);
+    border: 1px solid ;
+    width: 100%;
+    padding: 8px 40px;
+    margin-top: 2%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    /* voir si effet :hover */
+}
+
+.advanced {
+    translate:0 -16px;
+}
+
+.advanced .join_now {
+    background-color: rgba(80, 130, 240);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 8px 40px;
+    margin-top: 2%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    /* voir si effet :hover */
+}
+
+.remise {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color:rgb(50, 50, 200) ;
+    border-radius: 0 10px;
+    width: 60px;
+    line-height: 15px;
+    padding: 10px 0;
+}
+
+/** Our Blog **/
+
+.blog {
+    display: flex;
+    justify-content:center;
+    gap: 40px;
+    padding: 5% 0;
+}
+
+.blog_exemple {
+    position: relative;
+    text-align:start;
+    width: 320px;
+}
+
+.blog_photo_base {
+    transition: all 0.8s ease;
+}
+
+.blog_photo_container {
+    width: 100%;
+    z-index: 1;
+    transition: all 1.8s ease;
+}
+
+.blog_photo_container:hover {
+    width: 100%;
+    filter: brightness(0.6);
+    transition: all 0.8s ease;
+    cursor: pointer;
+}
+
+.blog_photo {
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.8s ease;
+}
+
+.incrustation_nom {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    font-size: 90%;
+    opacity: 0;
+    transition: all 1.8s ease;
+    z-index: 2;
+}
+
+.blog_photo_base:hover .incrustation_nom {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    font-size: 90%;
+    opacity: 1;
+    transition: all 0.8s ease;
+    z-index: 2;
+}
+
+.incrustation_date {
+    position: absolute;
+    top: 40px;
+    left: 16px;
+    opacity: 0;
+    transition: all 1.8s ease;
+}
+
+.blog_photo_base:hover .incrustation_date {
+    position: absolute;
+    top: 40px;
+    left: 16px;
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+
+.texte_nom {
+    color: white;
+    float: right;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.fa-user {
+    float: left;
+    color: white;
+}
+
+.texte_date {
+    float: right;
+    color: white;
+    font-size: 0.7em;
+    line-height: 14px;
+}
+
+.fa-clock {
+    float: left;
+    color: white;
+    font-size: 70%;   
+}
+
+.commentaire_photo {
+    text-align: start;
+}
+
+.commentaire {
+    color: rgba(128, 128, 128, 0.700);
+    font-size: 0.8em;
+    padding: 10px 0;
+    text-align: start;
+}
+
+.read_more {
+    color: rgba(80, 130, 240);
+    font-size: 0.8em;
+}
+
+/********************************FOOTER*************************************/
+
+footer {
+    background-color: rgba(20, 20, 20, 0.95);
+    padding: 50px 0;
+    color:rgba(128, 128, 128, 0.700);
+}
+
+.logo_footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.logo_container {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(128, 128, 128, 0.700);
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_footer i {
+    color:rgba(128, 128, 128, 0.700);
+}
+
+footer p {
+    text-align: center;
+    color:rgba(128, 128, 128, 0.700); 
+}
+
+.terms_condition {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 15px 0;
+    /* cursor: pointer; */
+}
+
+.terms_condition p {
+    padding: 0 15px 0 15px;
+}
+
+/******************* MEDIA QUERIES - TABLETTES *****************/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+
+/******************************* NAVBAR ************************/
+
+.navbar > h4 {
+    padding-top: 20px;
+}
+
+.navbar {
+    flex-direction: column;
+}
+
+.navbar > nav > ul > li {
+    padding: 30px 20px;
+}
+    
+/******************************* HOME ************************/
+
+.startup_creative {
+    flex-direction: column;
+    padding: 4% 10% 10% 10%;
+}
+
+.startup_creative > .presentation {
+    padding:4%;
+    text-align: center;
+}
+
+.startup_creative > .presentation > h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/******************************* FEATURES ************************/
+
+.gris{
+    padding: 1% 10%;
+}
+
+.features{
+    /* height: 300px; */
+    width:220px;
+}
+
+.description{
+    font-size: 0.9em;
+}
+
+h5{
+    padding: 6% 0 10% 0;
+}
+
+/******************************* HOW IT WORKS ************************/
+
+h2{
+    text-align: center;
+    padding: 5% 15% 3% 15%;
+}
+
+/******************************* PARALLAX ***************************/
+
+.blanc {
+    padding: 1% 10%;
+}
+
+/******************************* CREATIVITY ***********************/
+
+#creativite {
+    padding: 6% 4% 10% 4%;
+}
+
+.digital_creative {
+    flex: 2;
+    padding: 4% 4% 5% 2%;
+    text-align: justify;
+}
+
+.design_creatif {
+    flex: 3;
+}
+
+/******************************* OUR PRICING *********************/
+
+.carte_forfait {
+    width: 220px;
+}
+
+/******************************* OUR BLOG ************************/
+
+.blog_exemple {
+    width: 220px;
+}
+
+.blog {
+    gap: 20px;
+}
+}
+
+/******************* MEDIA QUERIES - SMARTPHONE ******************/
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+
+/******************************* NAVBAR ************************/
+/**************************** MENU BURGER **********************/
+
+#burger {
+    width: 30px;
+    height: 2px;
+    background: white;
+    display: inline-block;
+    position: relative;
+}
+
+#burger::before,
+#burger::after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: white;
+    display: inline-block;
+    position: absolute;
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+
+#burger::before {
+    top: -7px;
+}
+
+#burger::after {
+    top: 7px;
+}
+
+#burger.open {
+    background: transparent; /*la barre du milieu disparait*/
+}
+
+#burger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#burger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+header {
+    position: relative;
+    max-width: 480px;
+}
+
+ul {
+    background:radial-gradient(rgb(139, 195, 245), #1294b8);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 14%;
+    padding: 10px 0;
+    transform: scaleY(0);
+    transform-origin: center top;
+    transition: all 0.3s ease;
+}
+
+ul.open {
+    transform: scaleY(1);
+}
+
+ul li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+/******************************* NAVBAR ************************/
+.navbar > h4 {
+    padding-top: 20px;
+}
+
+.navbar {
+    flex-direction: column;
+}
+
+.navbar > nav > ul {
+    flex-direction: column;
+}
+
+.navbar > nav > ul > li {
+    padding: 28px 10px;
+}
+
+.logo {
+    padding-top: 20px;
+}
+    
+/******************************* HOME *************************/
+
+.startup_creative {
+    flex-direction: column;
+    padding: 4% 10% 10% 10%;
+}
+
+.startup_creative > .presentation {
+    padding:4%;
+    text-align: center;
+}
+
+.startup_creative > .presentation > h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.image-accueil {
+    padding: 20px 0 10px 0;
+}
+
+/******************************* FEATURES ***********************/
+
+.gris{
+    padding: 1% 10%;
+    font-size: 20px;
+}
+
+.caracteristiques{
+    flex-direction: column;
+    align-items: center;
+    padding: 8% 0;
+}
+
+.features:hover{
+    transform: none;
+}
+
+.features{
+    width:300px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.description{
+    font-size: 0.9em;
+    padding-top: 10%;
+}
+
+/******************************* HOW IT WORKS *********************/
+
+h2{
+    text-align: center;
+    padding: 5% 15% 3% 15%;
+}
+
+/******************************* TEAM *****************************/
+
+.presentation_equipe {
+    justify-content:center;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+}
+
+.presentation_personne {
+    /* border-bottom: 1px solid gray; */
+    border-top: 1px solid gray;
+}
+
+/******************************* PARALLAX **************************/
+
+.blanc {
+    padding: 1% 10%;
+    font-size: 20px;
+}
+
+.button_get_started {   
+    font-size: 20px;
+}
+
+/******************************* CLIENT ***************************/
+
+.logo_client_container {
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.logo_client_container > figure {
+    width: 40%;
+    padding-bottom: 40px;
+}
+
+
+/******************************* CREATIVITY ************************/
+
+#creativite {
+    padding: 6% 4% 10% 4%;
+}
+
+.digital_creative {
+    flex: 2;
+    padding: 10% 4% 5% 4%;
+    text-align: justify;
+    justify-content: center;
+    order: 2;
+}
+
+.design_creatif {
+    padding-top: 14px;
+    order:1;
+}
+
+#creativite {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+
+h3 {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.para_gris {
+    padding: 7% 0;
+    font-size: 20px;
+    color: rgba(128, 128, 128, 0.700);
+}
+
+.stat_creativity {
+    flex-direction: column;
+}
+
+.stat {
+    padding-right: 0px;
+    text-align: center;
+}
+
+.sous_stat {
+    color: rgba(128, 128, 128, 0.700);
+    padding-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.buttonForm_blue {
+    text-align: center;
+}
+
+.learn_more {
+    font-size: 20px;
+}
+
+/******************************* OUR PRICING ***********************/
+
+.gamme_forfait {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 10% 0 14% 0;
+}
+
+.advanced {
+    translate:0 0px;
+}
+
+.carte_forfait {
+    width: 300px;
+    padding: 5% 5%;
+}
+
+/******************************* OUR BLOG **************************/
+
+.blog {
+    flex-direction: column;
+    align-items:center;
+    gap: 40px;
+    padding: 5% 0;
+}
+
+.blog_exemple {
+    width: 320px;
+}
+
+.commentaire_photo {
+    font-size: 20px;
+}
+
+.commentaire {
+    font-size: 1em;
+    padding: 5px 0;
+}
+
+.read_more {
+    font-size: 1em;
+    padding-bottom: 20px;
+}
+
+/******************************* OUR BLOG **************************/
+
+footer {
+    padding: 30px 0;
+}
+
+.logo_footer {
+    gap: 50px;
+}
+
+.terms_condition {
+    align-items: center;
+}
+
+}
